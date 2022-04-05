@@ -1,0 +1,59 @@
+.home {
+  display: flex;
+  margin: 4rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.nav {
+  width: 25%;
+  background-color: #404040;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: rgba(255,255,255, 0.9);
+
+  &__profile {
+    display: flex;
+    margin: 5rem 2rem 0 2rem;
+    border-radius: 50%;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+  }
+
+  &__picture {
+    width: 25rem;
+    height: 25rem;
+  }
+}
+
+.about, .socials {
+  margin: 3rem 6rem;
+  border-bottom: 1px solid rgba(255,255,255, 0.5);
+  padding-bottom: 3rem;
+
+  &__name {
+    text-transform: uppercase;
+  }
+
+  &__title {
+    color: rgba(255,255,255, 0.8)
+  }
+
+  &__description {
+    color: rgba(255,255,255, 0.5);
+  }
+}
+
+.socials {
+  margin: 0 6rem;
+  border-bottom: none;
+}
+
+
+.main {
+  flex: 1;
+  background-color: grey;
+}
