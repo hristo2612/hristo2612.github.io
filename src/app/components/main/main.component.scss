@@ -1,0 +1,26 @@
+.points {
+  list-style: none;
+}
+.points >li {
+  position: relative;
+}
+.points>li:before {
+  content: '\25CF';
+  margin-right: 10px;
+  font-size: 20px;
+}
+.points>li:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '';
+  border-left: 2px solid black;
+  margin-left: 5px;
+  height: 100%;
+}
+.points >li:first-of-type:after {
+  top: 50%;
+}
+.points >li:last-of-type:after {
+  top: -50%;
+}
