@@ -28,7 +28,14 @@
     <div class="section__content">
       <div *ngFor="let row of section.entries" class="section__row">
         <div class="section__col">
-          <h3 class="section__info-title">{{row.leftTitle}}</h3>
+          <h3 class="section__info-title">
+            <a *ngIf="row.leftLink" [href]="row.leftLink" target="_blank" class="section__info-title-link">
+              {{row.leftTitle}}
+            </a>
+            <ng-container *ngIf="!row.leftLink">
+              {{row.leftTitle}}
+            </ng-container>
+          </h3>
           <p class="section__info">{{row.leftContent}}</p>
         </div>
         <div class="section__col">
