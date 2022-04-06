@@ -9,7 +9,7 @@
 
 .container > *:not(:last-child) {
   border-bottom: 1px solid rgba($color-dark, 0.5);
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
 }
 
 .header {
@@ -27,7 +27,7 @@
 
   &__subtitle {
     font-size: 3rem;
-    margin: 1.5rem 0;
+    margin: 1.5rem 0 0 0;
   }
 }
 
@@ -47,10 +47,13 @@
 
 .section {
 
+  color: rgba($color-dark, 0.8);
+
   &__title {
     text-transform: uppercase;
     margin-left: 2rem;
     padding-bottom: 1rem;
+    color: rgba($color-dark, 0.99);
   }
 
   &__row {
@@ -59,26 +62,58 @@
 
   &__col {
     padding: 0 2rem 2rem 2rem;
-  }
 
-  &__col:first-child {
-    border-right: 1px solid $color-dark;
-    position: relative;
+    &:first-child {
+      border-right: 1px solid rgba($color-dark, 0.8);
+      position: relative;
+      width: 20rem;
+  
+      &:before {
+        content: '';
+        position: absolute;
+        right: -8px;
+        top: 0;
+  
+        width: 15px;
+        height: 15px;
+        border-radius: 7.5px;
+        background-color: $color-dark;
+      }
+    }
 
-    &:before {
-      content: '';
-      position: absolute;
-      right: -8px;
-      top: 0;
-
-      width: 15px;
-      height: 15px;
-      border-radius: 7.5px;
-      background-color: $color-dark;
+    &:last-child {
+      flex: 1;
     }
   }
 
-  &__info-title {
-    margin-top: -10px;
+  &__info {
+    margin: 0.5rem 0 1rem 0;
+
+    &-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      &__item {
+        display: flex;
+        align-items: center;
+        margin-top: 0.5rem;
+
+        & > svg {
+          fill: $color-dark;
+          margin-right: 1rem;
+        }
+
+        & > div {
+          flex: 1;
+        }
+      }
+    }
+
+    &-title {
+      margin-top: -10px;
+      margin-bottom: 0rem;
+    }
   }
 }
