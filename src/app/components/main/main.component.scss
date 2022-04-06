@@ -1,26 +1,84 @@
-.points {
+@import '../../../sass/variables';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 0 6rem 0 6rem;
+}
+
+.container > *:not(:last-child) {
+  border-bottom: 1px solid rgba($color-dark, 0.5);
+  padding-bottom: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 11rem 0 3rem 0;
+  color: $color-dark;
+
+  &__title {
+    font-size: 7rem;
+    line-height: 7rem;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  &__subtitle {
+    font-size: 3rem;
+    margin: 1.5rem 0;
+  }
+}
+
+.contacts {
   list-style: none;
+
+  &__item {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    margin-right: 1rem;
+  }
 }
-.points >li {
-  position: relative;
-}
-.points>li:before {
-  content: '\25CF';
-  margin-right: 10px;
-  font-size: 20px;
-}
-.points>li:after {
-  position: absolute;
-  left: 0;
-  top: 0;
-  content: '';
-  border-left: 2px solid black;
-  margin-left: 5px;
-  height: 100%;
-}
-.points >li:first-of-type:after {
-  top: 50%;
-}
-.points >li:last-of-type:after {
-  top: -50%;
+
+.section {
+
+  &__title {
+    text-transform: uppercase;
+    margin-left: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  &__row {
+    display: flex;
+  }
+
+  &__col {
+    padding: 0 2rem 2rem 2rem;
+  }
+
+  &__col:first-child {
+    border-right: 1px solid $color-dark;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      right: -8px;
+      top: 0;
+
+      width: 15px;
+      height: 15px;
+      border-radius: 7.5px;
+      background-color: $color-dark;
+    }
+  }
+
+  &__info-title {
+    margin-top: -10px;
+  }
 }
