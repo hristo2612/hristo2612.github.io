@@ -1,3 +1,3 @@
 # My Short Resume
 
-You can check it out here: [Click Here](https://hristo2612.github.io).
+<h2>You can check it out <a href="https://hristo2612.github.io">HERE</a></h2>
