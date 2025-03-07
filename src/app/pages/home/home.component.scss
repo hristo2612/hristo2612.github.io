@@ -1,18 +1,23 @@
-@import '../../../sass/variables';
+@import "../../../sass/variables";
 
-.home {
-  display: flex;
-  margin: 4rem;
-  border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+:host {
+  display: block;
+  min-height: 100vh;
+  background: #fbfbfd;
 }
 
-.nav {
-  width: 30%;
-  background-color: $color-dark;
+.home {
+  min-height: 100vh;
+  background: #fbfbfd;
 }
 
 .main {
-  flex: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 max(2rem, calc((100vw - 1400px) / 2));
+  min-height: 100vh;
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
 }
